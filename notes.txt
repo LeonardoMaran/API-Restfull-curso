@@ -1,0 +1,40 @@
+Video 2
+
+nodemon
+
+npm install --save-dev nodemon
+
+listar processos porta especifica
+
+lsof -i :[porta]
+
+kill -9 numero pid
+
+Estrutura
+
+Routes>handlers/controllers>services>models
+
+O Hapi js chama o controllers do MVC de Handlers
+
+Routes é aonde agente define os endpoints
+
+Handlers - Funcoes que responde os endpoints
+
+Services- Quando voce tem alguma interacao com algum servico
+tipo  o mongo, servico de cache como o redis, por questao de
+organizacao o mongo fica la
+
+Models - A estrutura que agente salva um product no mongo, este
+esquema vai estar definido no modelo
+
+Com excessao do routes, todo o restante vai ser pasta
+Vamos ter pasta para o handles, uma para service e outra
+para models, para routes se tiver muitas rotas a principio eu
+vou criar um arquivo routes.
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+  "name": "api-restfull-curso",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonardoMaran/API-Restfull-curso.git"
+  },
+  "keywords": [
+    "Leonardo",
+    "Maran"
+  ],
+  "author": "Leonardo Maran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonardoMaran/API-Restfull-curso/issues"
+  },
+  "homepage": "https://github.com/LeonardoMaran/API-Restfull-curso#readme",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
