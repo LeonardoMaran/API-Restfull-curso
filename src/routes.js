@@ -13,7 +13,15 @@ module.exports = [
                  //return 'Hello Programador';
      // }
      //  exportei a funcao para o arquivo products
-    }
+
+    },
+
+    {
+        method: 'POST',
+        path: '/api/v1/products',
+        handler: productHandler.save
+        //metodo .save, vai salvar no banco de dados
+      },
 ]
 
 // video 2 28.17
@@ -32,3 +40,4 @@ module.exports = [
 //api restfull
 
 // array de rotas
+
