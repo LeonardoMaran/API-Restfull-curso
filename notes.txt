@@ -42,6 +42,8 @@ primeira imagem oficial do docker
 
 docker run --name some-mongo -d mongo:tag
 
+
+
 vou modificar o comando, vou dar um name api-db
 
 vou botar um --rm antes, explico melhor naaula  de docker
@@ -50,6 +52,8 @@ mongo tem a porta padrao 27017
 
 voucolocar run -p27017:27017 / vou mudar para 27018/27017
 porque eu ja instalei o mongo na minha maquina e vai dar algum erro
+
+docker run -p27018:27017 --rm  --name api-db  -d mongo
 
 o que eu estou querendo dizer com isso. A primeira porta e a
 porta da maquina, e a segunda porta e a porta do container

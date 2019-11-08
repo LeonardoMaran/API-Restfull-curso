@@ -1,5 +1,8 @@
+require('./services/mongo');
+//a conexao tem que ser aberta desde o inicio para fucnionar
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
+
 
 
 
