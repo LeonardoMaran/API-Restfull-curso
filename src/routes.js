@@ -15,6 +15,20 @@ module.exports = [
      //  exportei a funcao para o arquivo products
 
     },
+    //pegar a rota especifica do id
+    {
+      method: 'GET',
+       path: '/api/v1/products/{id}',
+       handler: productHandler.find
+     },
+
+
+
+        {
+       method: 'DELETE',
+        path: '/api/v1/products/{id}',
+        handler: productHandler.remove
+      },
 
     {
         method: 'POST',

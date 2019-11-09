@@ -71,6 +71,15 @@ video 3 - integrando o mongoDB
 o mongodb trabalha com collections que e parecido com tabelas
 
 
+video 5 - Repository pattern
+
+Padrao muito cnhecido para voce desacoplar seu repositorio de dados
+
+vamos imaginar que voce se comunica com milhares de linha de codigoe voce
+tem que mudar para o mongo db, e com o padrao de repositorio voce abstrai
+isto, a apicacao entao vai pedir para interface ou repositorio que vai pedir
+para qual banco o mongo ou o mysql vai retornar para a aplicacao,
+
 
 
 

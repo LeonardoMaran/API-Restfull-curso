@@ -10,14 +10,19 @@ const transformer = product => ({
         links:{
             self: `/api/v1/products/${product.id}`
         }
-
 });
 //parou  video 3 = 21.47
 const getAll = async (request, h) => {
    const products = await ProductModel.find({});
     //objeto vazio retorna todos da lista
-    return {data:products.map(transformer)};
+    return products.map(transformer);
     //map itera a funcao de produtos  e vai aplicar a funcao de transformer
+};
+
+const find = async (req) => {
+    const product = await ProductModel.findById(req.params.id);
+    return { data: transformer(product) };
+
 };
 
 const save = async (req, h) =>  {
@@ -31,6 +36,20 @@ const save = async (req, h) =>  {
 
     return h.response(transformer(product)).code(201);
 };
+
+   //como eu pego o parametro id: atraves da propriedade req,
+   //ele disponibiliza a propriedade params, que e um objeto
+   //que eu passo na url,
+
+
+   //para eu deletar usando o mongose basta eu vir aqui
+   //e utilizar a funcao findOneAndDelete
+    const remove = async (req, h) => {
+        await ProductModel.findByIdAndDelete({_id: req.params.id});
+        return h.response().code(204);
+        //status 204 -foi deletado com sucesso e sem nenhuma mensagem no corpo do http
+  //para pegar o id no parametro que eu passo eu coloco o .id
+    };
     //venho aqui no meu  handlers, vou  dar um return h
     //o h como eu falei e um  conjunto do hapi para voce
     //mandar resposta http,
@@ -54,8 +73,10 @@ const save = async (req, h) =>  {
 // eu venho no comeco da funcao  e coloco async
 module.exports = {
     getAll,
-    save
-}
+    save,
+    find,
+    remove
+};
 //e como e que o  mongoose trabalha para capturar estes dados
 // e salvar la  no mongo. E simples eu  tenho que instanciar
 //este product model que agente criou e importou aqui na pagina
