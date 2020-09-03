@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/LeonardoMaran/API-Restfull-curso#readme",
   "dependencies": {
-    "@hapi/hapi": "^18.4.0",
+    "@hapi/hapi": "^19.1.1",
     "mongoose": "^5.7.8"
   },
   "devDependencies": {
